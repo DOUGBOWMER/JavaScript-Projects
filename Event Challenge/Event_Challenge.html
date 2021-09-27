@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Challenge</title>
+    <script src="/Java/Event_Challenge.js"></script>
+<head>
+
+    <body>
+        <div>
+            <h1>First Event  Challenge: Return Date/time to and Element</h1>  <!--// Below we are calling method for element by its iD "Demo" when a user clicks the then asking the program to return the Tiem via the Date function -->
+                <br><br>
+                <button onclick="document.getElementById('demo').innerHTML = Date()">Whats the Time?</button><!--inline ajve script called by html-->
+                    <h3 id="demo">Element ID = "demo"</h3><!--Here is the element we called  and this is where we are asking it return Date()-->
+        </div>
+        <br>
+    <br>
+    
+    <H1>Second Event Challenge: Change the Content of Element</H1>
+        <div>
+            <button onclick="this.innerHTML = Date()"> TheTime Is?</button><!--using the event handler oncclick to return 
+            the value of DATE() to itself using this.innerhtml-->
+                <h2 id="demo">This is an Examplle place holder ID DEMO</p><!---this shows the difference between methedos -->
+            </div>
+            <br>
+        <br>
+
+        <H1> Third Event Challenge: </H1><!--Below we use the on click event handler to call the diplay date function-->
+            <button onclick="displayDate()">What is the Time?</button> script locatted below
+                <script>//inserting a script inline 
+                   function displayDate() {
+                       document.getElementById("demo2").innerHTML = Date();
+                   }
+                </script>
+            <p id="demo2"></p>
+                
+            <br>
+        <br>
+                 
+            
+            </body>
+</html>
