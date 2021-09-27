@@ -26,6 +26,8 @@ function My_First_Function() {          //Defining a function and naming it
     var result = str.fontcolor("green");//using the fontcolor method on
                                         //str variable
     document.getElementById("Green_text").innerHTML=result;//putting the value
-                                        //of result into HTML element that has id  "Greent_text" id
-
+                                        //of result into HTML element that has id  "Greent_text" 
 }
+var B="Its a wonderful day in the neighbor hood a wonerfull day in the neighbor hood, SO";//assinging variable b to string value
+var C="won't you be my neighbor";//assinging variable c to string value
+document.write(B+C)// using document write method to concatenate variable B and C
