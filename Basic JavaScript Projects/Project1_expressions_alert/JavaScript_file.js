@@ -5,5 +5,5 @@ document.write(x);
 var A ="This is a string";
 document.write(A);
 var B="It a wonderful day in the neighbor hood a wonderful day in the neighbor hood, so"
-Var C="wont you be my neighbor"
+var C="wont you be my neighbor"
 document.write(B+C)

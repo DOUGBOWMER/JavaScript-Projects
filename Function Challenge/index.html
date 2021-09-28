@@ -7,15 +7,27 @@
     <script src="JS/main.js"></script>
     
 </head>
-<body>
+<body style="text-align: center;">
     <h1>FUNCTION CHALLENGE</h1>
         
-        <p>Enter in your temperature and Click button to convert to celsius!</p>
-        <input type="text" id="farenheit"><button onclick="toCelsius()">Get Celsius</button>
-        <br>
-        <div>
-            <h3 id="result" style="border:2px"></h3>
-        </div>
-
-    </body>
+        <p>Enter in Your Temperature to Convert to Celsius</p>
+            <p style="color: blue;">
+                <label>Your Temperature</label><!--naming the input field for the user, next line i am setting the placeholder 
+                    value agian to let user know what i need from them-->
+                    <input id="inputFahrenheit" type="number" placeholder="Enter Temperature in Farenheit" 
+                    oninput="temperatureConverter(this.value)"
+                    onchange="temperatureConverter(this.value)"><!--In this section we are leting the function know 
+                        what the input is starting with so that it can get the value of the change and parse it to the function-->
+            </p>
+                <p style="color:red;">Celsius: <span id="outputCelsius"></span></p><!--setting font color to red-->
+                    <div style="align-content: center;"><!--aligninmy div-->
+                        <h3>Now I get to ask you a question!</h3><br>
+                            <button onclick="question()" style="align-content: center;">Click Here Please</button><!--calling the question function (see javascript for definition)
+                                Aligning button, curious as to why the button did not get aligned in the div alignment-->
+                        <br>
+                        <h2 id="color"></h2><!--setting id for document.getElementById method, so it know where to put users answer-->
+                    </div>
+    
+    
+            </body>
 </html>
