@@ -21,3 +21,12 @@ function custDetail() {
     ". We need to veify your number is " + cust3.Customer_Phone + " and your email is " + cust3.Customer_Email + 
     ". If this not correect please respond to this email with updated information. Thank you!";
 }
+function nf() { //naming function
+    document.getElementById("Nested_Function").innerHTML= Count(); //returning the cvalue and giving value to Count function
+    function Count() {//naming the count function
+        var Starting_point = 1; //declaring a value for starting point
+        function Plus_one() {Starting_point += 1;} //seting operation fo PlusOne function
+        Plus_one(); //return with value for plus one
+        return Starting_point; //sending the value from function back to starting pont resulting in the user get the dat of 2
+    }
+}

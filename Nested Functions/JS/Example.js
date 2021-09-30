@@ -1,4 +1,4 @@
-function count_Function() {naming function
+function count_Function() {//naming function
     document.getElementById("Counting").innerHTML = Count()// invoking the COunt Function after using the  documentbyID to intiate coutning
         function Count () {// counting function
             var Starting_point = 9;// this is where  we begin count from
