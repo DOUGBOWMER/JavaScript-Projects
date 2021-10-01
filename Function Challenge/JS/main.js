@@ -15,3 +15,46 @@ function question() {//naming my function
     //and set the alert function we learned at the begining of this course
     }//close secondary function
 }//close primary function
+
+function a() {
+    var workStartTime= 15
+    var timeNow = new Date().getHours()
+    
+    if (new Date().getHours() < workStartTime) {
+        document.getElementById("timeSherrif").innerHTML= " Hurry up, your late for work!"
+    
+    
+            
+        }
+    }
+
+    function yesfun() {
+        var time = 3
+        var alarm = 6
+        if (time < alarm) {
+            document.getElementById("yes").innerHTML = "your have some time" 
+        }}  
+
+        function agefunction() {
+            age=document.getElementById("age").value
+            if (age >= 18) {
+                vote = "you are old enough to vote!"; 
+            }
+                else { 
+                    vote = "you are not old enough to vote"
+                }
+                    document.getElementById("How_old_are_you").innerHTML = vote
+        }
+
+        function catf() {
+            var catn = document.getElementById("cats").value
+            if (catn >= 3) { 
+                a= "you have to many cats for me" 
+            }
+                else{
+                    a=" perfectly acceptable amount of felines"
+                }
+                document.getElementById("answer1").innerHTML = a 
+        }
+
+
