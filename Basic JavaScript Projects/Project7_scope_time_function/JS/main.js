@@ -9,7 +9,7 @@ function reach() {
     document.getElementById("snowman").innerhtml= finishtime
 }
 
-function timefunction() {
+function Time_function() {
     var time = new Date().getHours(); 
     var reply;
     if (time < 12 == time > 0 ) {
