@@ -1,12 +1,12 @@
 var x = 30
-
-function Addx() {
+var tracktime =2 * x
+function Addx(){
     var tracktime = 2 * x;
-    document.getElementById("frosty").innerhtml= tracktime;
+    document.getElementById("frosty").innerHTML= tracktime;
 }
 function reach() {
-    var finishtime= tracktime-x;
-    document.getElementById("snowman").innerhtml= finishtime
+    var finishtime = tracktime - x;
+    document.getElementById("snowman").innerHTML= finishtime
 }
 
 function Time_function() {
@@ -22,4 +22,9 @@ function Time_function() {
         reply = "it is evening time";
     }
     document.getElementById("time_of_day").innerHTML = reply;
+}
+
+function get_date() { 
+    let date = new Date(); 
+    document.getElementById("Greetings").innerHTML = date
 }
