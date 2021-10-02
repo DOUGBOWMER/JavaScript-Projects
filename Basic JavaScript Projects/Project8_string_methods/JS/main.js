@@ -25,3 +25,20 @@ let str = "lorem ipsum this car name love umbrella.!"; //seting var, giveing it 
 document.getElementById("ipsum").innerHTML = str.search("umbrella")//using the document.getElementById methof to find and then return answer
 //answer is 31 becasue that is the postion of the word umbrella
 }
+
+function sm() {//naming function
+    var x = 10;// setting the variable
+    document.getElementById("nts").innerHTML = x.toString();//using document get element method to retrive vale from html
+    //and set value to the number 10 using thtostring meethod
+} 
+function precision_method() {//naming function
+    var x = 15987.4564; //set variable(number we a re going to wasnt to us precsion on)
+    document.getElementById("precision").innerHTML = x.toPrecision(10);//using method precision method on the vale retrieve from html
+} 
+
+function fixnumber() {//naming function
+    let x = 9589.2656//set value of varible
+    document.getElementById("digitnumber").innerHTML = Number.parseFloat(x).toFixed(2);//using the 
+    //toFixed method to retur a number with 2 deciaml place
+
+}
