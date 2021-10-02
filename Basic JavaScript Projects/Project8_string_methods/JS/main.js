@@ -42,3 +42,9 @@ function fixnumber() {//naming function
     //toFixed method to retur a number with 2 deciaml place
 
 }
+
+
+function typesfunction() {//maning the function type
+    let t = ["indian", "harley", "buel", "suzuki"]//and array of motorcyle for sale
+        document.getElementById("answer").innerHTML = t.valueOf()//using the Value of to return the whole array
+    }
