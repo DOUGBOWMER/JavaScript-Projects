@@ -5,15 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer Challenge</title>
-    
+    <link rel="stylesheet" href="CSS/main.css">
 
 </head>
     <body>
         <p>How many seconds would you like to set the timer for'''?</p>
             <input id="seconds" value=""/>
-                <button onclick="countdown()">Click Here</button>
-                    <p id="timer"></p>
+                <button id="button" onclick="countdown()">Click Here</button>
+                    <p id="timer"></p> 
+                   
+<!--=====================SLIDESHOW==============-->
 
-                    <script src="JS/main.js"></script>
+<H3>FULL WIDTH SLIDESHOW</H3>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="images/image1.jpeg" style="width: 100%;" alt="Slide 1 image one">
+    </div>
+    <div class="mySlides fade">
+        <img src="images/image2.jpeg" style="width: 100%;" alt="Slide 2 image one">
+    </div>
+    <div class="mySlides fade">
+        <img src="images/image3.jpeg" style="width: 100%;" alt="Slide 3 image one">
+    </div>
+
+    <!--=========next buttons-->
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+                    <!-----External Script-------->
+<script src="JS/main.js"></script>
     </body>
 </html>
