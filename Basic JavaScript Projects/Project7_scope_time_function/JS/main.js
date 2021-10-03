@@ -30,7 +30,7 @@ function get_date() {
 }
 function joke() {
     document.getElementById("answer").innerHTML = "King kong"
-    console.log("KingKong")
+    console.log("answer")
 }
 
 
