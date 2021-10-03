@@ -28,3 +28,9 @@ function get_date() {
     let date = new Date(); 
     document.getElementById("Greetings").innerHTML = date
 }
+
+function howmanyfunction() {
+    let l = 4965
+    document.getElementById("licks").innerHTML = l
+ console.log(l)    
+}
