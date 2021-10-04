@@ -113,6 +113,16 @@ function constant_function2() {
 // thw output would be 82,33,33
 function foodq() {
  let food = "Big Mac"
-document.getElementById("foodanswer").innerHTML = food + " are kind of gross"
+document.getElementById("foodanswer").innerHTML = food + " are kind of gross";
 }
 
+
+let moto = {
+    make:"Indian",
+    model:"Roadmaster",
+    year:"2016",
+    description : function() {
+        return "the motorcyle is a " + this.year + this.make + this.model;
+    }
+};
+document.getElementById("bike").innerHTML = moto.description();
