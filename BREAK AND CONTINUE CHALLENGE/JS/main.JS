@@ -15,3 +15,5 @@ for (let i = 0; i < 10; i++) {//using the for statment we set value i to 0 and a
     text += "The number is " + i + "<br>"; // assing the variable text with a new valuea string plus the index = text
 }
 document.getElementById("continueState").innerHTML = text;// using getdocumentbyelement method to assing the value of text to the element continueState
+/////////END//////////////
+////////BEGIN "SWITCHSTATEMENT"////////////
