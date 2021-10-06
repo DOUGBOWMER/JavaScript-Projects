@@ -19,4 +19,10 @@ function service_Fn() {
                 service_Output = "Please enter a service exactly as written on the above list";    
             }
             document.getElementById("Output").innerHTML = service_Output;
+        } 
+
+        function Hello_World_function() {
+            var A = document.getElementsByClassName("Click");
+            A[0].innerHTML = "this Text Just Change on You";
         }
+    
