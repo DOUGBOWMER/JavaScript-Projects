@@ -1,0 +1,47 @@
+body {
+    background-color: cadetblue;
+    
+    
+    ;
+}
+
+.formcontainer {
+    padding: 1%;
+    margin: 2%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: blue;
+    height:200px;
+    width:300px;
+    margin-top: 50px;
+    margin-left: 38%;
+    box-shadow:1px 2px 5px  black;
+}
+
+
+form {
+    border: coral;
+    max-width: 295px;
+
+}
+label{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    align-content: center;
+    text-shadow: 1px 2px 5px rgb(51, 51, 51);
+
+}
+
+input {
+    width: 250px;
+    padding: 5px;
+    text-shadow: 1px 2px 5px rgb(51, 51, 51);
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:white;
+    text-align: center;
+    text-shadow: 1px 2px 5px rgb(51, 51, 51);
+
+}
