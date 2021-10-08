@@ -67,3 +67,44 @@ function placeXOrO(squareNumber) {
         }
     }
 }
+
+//This function parses the selectedSquares array to search for win conditions.
+//drawWinLine function is called to draww line if condition is met.
+function checkWinConditions() {
+    // x 0, 1, 2 condition. 
+    if      (arrayIncludes('0X', '1X', '2x')) { drawWinLine(50, 100, 558, 100) }
+    // x 3, 4, 5 condition. 
+    else if (arrayIncludes('3x', '4X', '5x')) { drawWinLine(50, 100, 558, 100) }
+    //X 6, 7, 8 condition.
+    else if (arrayIncludes('6x', '7x','8x')) {drawlineLine(50, 508, 558, 508) }
+    //X 0. 3, 6 condition.
+    else if (arrayIncludes('0x', '3x', '6x')) {drawWinLine(100, 20, 100, 558) }
+    //X 1, 4,7,
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('2x', '5x', '8x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('6x', '4x', '2x')) {drawWinLine (304, 50, 304, 558)}
+
+    //else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+    else if (arrayINcludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+
+
+
+
+
+
+    }
