@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"SOME" Method</title>
+
+</head>
+<body>
+    <h1>
+        what are the ages of people effect their decisions
+    </h1>
+
+    <p class="displayAge">Ages of volunters</p>
+    <button onclick="myFunction()">Click Here</button>
+    <script>
+        var ages = [2, 10, 18, 20, 13, 15, 30];
+        //using the arrow function to pass in the parameter of age//
+        checkAge = (age) => age >= 18;
+        // use the .some() tp interat thoughthe array of ages and display the result.
+        function myFunction () {
+            document.getElementById('displayAge').innerHTML = ages.come(checkAge);
+        }
+    </script>
+</body>
+</html>
