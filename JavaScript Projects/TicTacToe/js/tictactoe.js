@@ -8,7 +8,7 @@ function placeXOrO(squareNumber) {
     //This condition ensures a square hasn't been selected already.
     // The .some() method is used to check each element of selectedSquare array
     //to see if it contains the square number clicked on
-    if (!selectedSquares.some(element => element.includes('squareNumber'))) {
+    if (!selectedSquares.some(element => element.includes(squareNumber))) {
         //THis Variable retrives the HTML element id that was clicked
         let select = document.getElementById(squareNumber);
         //This condition checks who's turn it is.
@@ -104,7 +104,7 @@ function checkWinConditions() {
 
     else if (selectedSquares.length >= 9) {
 //this fuction plays the tie game sound
-        audio('/media/tie.mp3');
+        audio('media/tie.mp3');
 //this function sets a.3 second timer berfore the resetGame is called
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -137,8 +137,8 @@ function audio(audioUrl) {
 
 }
 
-//this functioon utilizes html canvas to draw win lines. 
-function drawWinLine(coordX1, coordY1, coorX2, coordY2) {
+//this function utilizes html canvas to draw win lines. 
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line access our html canvas element.
     const canvas = document.getElementById('win-lines')
     //this line gives us access to methods and properties to use on the canvas
@@ -162,7 +162,7 @@ function animateLineDrawing() {
     //this cariable creates a loop.
     const animationLoop = requestAnimationFrame(animateLineDrawing);
     //this method clears content from last loop interation
-    c.clearReact(0, 0, 608, 6080)
+    c.clearReact(0, 0, 608, 608)
     //this method starts a new path
     c.beginPath();
     //this method moves us to a starting point for our line. 
@@ -176,14 +176,14 @@ function animateLineDrawing() {
     //this method draws everything we laid out above
     c.stroke();
     // this condition checks if weve reached the endpoint 
-    if (x1 <= x2 && y1 <=y2) {
+    if (x1 <= x2 && y1 <= y2) {
         ///this conditions adds 10 to the previous endpoint. 
         if (x < x2) { x += 10; }
         // this conditions adds 10 to the previous end y point 
         if (y < y2) { y += 10;}
         //this condition cancels our animation loop 
         //if we  have reache the end points. 
-        if (x>= x2 && y >= y2) { cancelAnimationFrame(animationtLoop);}
+        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop);}
     }
 }
 // this condition is simililar to the one above. 
