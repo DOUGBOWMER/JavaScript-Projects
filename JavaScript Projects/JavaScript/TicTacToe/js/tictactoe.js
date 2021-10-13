@@ -14,7 +14,7 @@ function placeXOrO(squareNumber) {
         //This condition checks who's turn it is.
         if (activePlayer === 'X') {
             //if activePLayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("/images/x.png")';
+            select.style.backgroundImage = 'url("images/x.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
             } else {
                 // if activePlayer is equal to 'O', the o.png is placed in HTML.
@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
             }
 
             //This function plays placement of sound. 
-            audio('/media/place.mp3');
+            audio('./media/place.mp3');
             //this ondition checks to see if it is computers turn.
             if (activePlayer === 'O'){
                 //This function disable clicking for computer choice.
@@ -102,9 +102,9 @@ function checkWinConditions() {
     else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine (100, 100, 520, 520)}
 
 
-    else if (selectedSquares.length >= 9) {
+    else if (selectedSquares.length <= 9) {
 //this fuction plays the tie game sound
-        audio('media/tie.mp3');
+        audio('./media/tie.mp3');
 //this function sets a.3 second timer berfore the resetGame is called
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -116,11 +116,11 @@ function checkWinConditions() {
         const c = selectedSquares.includes(squareC)
     //if the 3 variable we pass are all included in our array true is 
     //returned and our else if condition executes the drawWinLine funciton.
-    if (a === true && b === true && c === true) {return true};
+    if (a === true && b === true && c === true) { return true }
     }    
 }
 
-// this function makes our body element temporarily unclikable. 
+//this function makes our body element temporarily unclikable. 
 function disableClick() {
     // this makes our body unclickable. 
     body.style.pointerEvents='none';
@@ -144,11 +144,11 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line gives us access to methods and properties to use on the canvas
     const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-    let xl = coordX1,
+    let x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
         y1 = coordY1,
         //this line indicates wher the end of a lines x axis is/ 
-        x2 =coordX2, 
+        x1 =coordX2, 
         //this line indicates where the end of a lines y axis is .
         y2 = coordY2,
         //this cariable stores temporary x axis data we update in our animation loop. 
@@ -172,7 +172,7 @@ function animateLineDrawing() {
     //This method sets the width of our line. 
     c.lineWidth = 10; 
     //this method sets the color of our ine. 
-    c.strokeStyle = 'rgba(70. 255. 33, .08)';
+    c.strokeStyle = 'rgba(70. 255. 33, .8)';
     //this method draws everything we laid out above
     c.stroke();
     // this condition checks if weve reached the endpoint 
@@ -183,31 +183,31 @@ function animateLineDrawing() {
         if (y < y2) { y += 10;}
         //this condition cancels our animation loop 
         //if we  have reache the end points. 
-        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop);}
+        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop); }
     }
 }
 // this condition is simililar to the one above. 
 //this necessay for the 6, 4, 2 win condition
 if (x1 <= x2 && y1 >= y2) {
-    if (x < x2) { x += 10;}
-    if (y > y2) {y -= 10; }
+    if (x < x2) { x += 10; }
+    if (y > y2) { y -= 10; }
     if ( x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    
 }
 
 //this function cleas oour our cavas0 after our win line is drawn.
 function clear() {
     //this liine starts our animation loop.
-    const animation = requestAnimationFrame(clear);
+    const animationLoop = requestAnimationFrame(clear);
     //this line clears our canvas. 
     c.clearReact(0, 0, 608, 608);
     //this line stops our aniamtion loop. 
-    cancelAnimateFrom(aniamationLoop); 
+    cancelAnimateFrom(animationLoop); 
 }
 
 //this line disallows clicking while the Win Sound is Placing
 disableClick(); 
 //this line plays the win sounds.
-audio('/media/winGame.mp3');
+audio('./media/winGame.mp3');
 //This line calls our main animation loop. 
 animateLineDrawing();
 //this line waits 1 second. Then, clears canvas, resets game, adn allows clicking again.
