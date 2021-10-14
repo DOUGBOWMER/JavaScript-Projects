@@ -3,6 +3,8 @@ let activePlayer = 'X';
 //This array  store an array of moves. we use this to determine win conditions.
 let selectedSquares = [];
 
+let x1, y1, x2, y2, x, y;
+
 //this function is for placing an x or o in a square. 
 function placeXOrO(squareNumber) {
     //This condition ensures a square hasn't been selected already.
@@ -75,7 +77,7 @@ function checkWinConditions() {
     // x 3, 4, 5 condition. 
     else if (arrayIncludes('3x', '4X', '5x')) { drawWinLine(50, 304, 558, 304) }
     //X 6, 7, 8 condition.
-    else if (arrayIncludes('6x', '7x','8x')) {drawlineLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6x', '7x','8x')) {drawWinLine(50, 508, 558, 508) }
     //X 0. 3, 6 condition.
     else if (arrayIncludes('0x', '3x', '6x')) {drawWinLine(100, 50, 100, 558) }
     //X 1, 4,7,
@@ -144,17 +146,17 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line gives us access to methods and properties to use on the canvas
     const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-    let x1 = coordX1,
+    x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
-        y1 = coordY1,
-        //this line indicates wher the end of a lines x axis is/ 
-        x2 =coordX2, 
-        //this line indicates where the end of a lines y axis is .
-        y2 = coordY2,
-        //this cariable stores temporary x axis data we update in our animation loop. 
-        x = x1,
-        //this variable  store temporary y axis data we update in our animation loop. 
-        y = y1;
+    y1 = coordY1,
+    //this line indicates wher the end of a lines x axis is/ 
+    x2 =coordX2, 
+    //this line indicates where the end of a lines y axis is .
+    y2 = coordY2,
+    //this cariable stores temporary x axis data we update in our animation loop. 
+    x = x1,
+    //this variable  store temporary y axis data we update in our animation loop. 
+    y = y1;
 }
 
 //this funtion intereacts with the canvas 
@@ -188,7 +190,7 @@ function animateLineDrawing() {
 }
 // this condition is simililar to the one above. 
 //this necessay for the 6, 4, 2 win condition
-if ( x1 <= x2 && y1 <= y2 ); {
+if (x1 <= x2 && y1 >= y2) { 
     if (x < x2) { x += 10;}
     if (y > y2) {y -= 10; }
     if ( x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    
