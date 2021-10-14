@@ -1,5 +1,5 @@
 //This variable keeps track of whose turn it is.
-let activePlayer = 'X' 
+let activePlayer = 'X'; 
 //This array  store an array of moves. we use this to determine win conditions.
 let selectedSquares = [];
 
@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
             }
 
             //This function plays placement of sound. 
-            audio('/media/place.mp3');
+            audio('./media/place.mp3');
             //this ondition checks to see if it is computers turn.
             if (activePlayer === 'O'){
                 //This function disable clicking for computer choice.
@@ -144,7 +144,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line gives us access to methods and properties to use on the canvas
     const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-    let xl = coordX1,
+    let x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
         y1 = coordY1,
         //this line indicates wher the end of a lines x axis is/ 
@@ -188,7 +188,7 @@ function animateLineDrawing() {
 }
 // this condition is simililar to the one above. 
 //this necessay for the 6, 4, 2 win condition
-if (x1 <= x2 && y1 >= y2) {
+if ( x1 <= x2 && y1 <= y2 ); {
     if (x < x2) { x += 10;}
     if (y > y2) {y -= 10; }
     if ( x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    
@@ -216,13 +216,13 @@ setTimeout(function () { clear(); resetGame(); } , 1000);
 //this funtcion resets the game in the event of a tie or a win. 
 function resetGame() {
     //this for loop iterates through each html square element 
-    for(let i = 0; i < 9; i++) {
+    for (let i = 0; i < 9; i++) {
         //this variable gets the html element of i
         let square = document.getElementById(String(i))
         //this removes our elements background image. 
         square.style.backgroundimage = '' 
     }
 //this resets our array so it is empty and we can start over. 
-selectedSquares = [] 
+selectedSquares = []; 
 
 }
