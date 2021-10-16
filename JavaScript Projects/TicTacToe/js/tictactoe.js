@@ -3,7 +3,7 @@ let activePlayer = 'X';
 //This array  store an array of moves. we use this to determine win conditions.
 let selectedSquares = [];
 
-let x1, y1, x2, y2, x, y;
+
 
 //this function is for placing an x or o in a square. 
 function placeXOrO(squareNumber) {
@@ -77,17 +77,17 @@ function checkWinConditions() {
     // x 3, 4, 5 condition. 
     else if (arrayIncludes('3x', '4X', '5x')) { drawWinLine(50, 304, 558, 304) }
     //X 6, 7, 8 condition.
-    else if (arrayIncludes('6x', '7x','8x')) {drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6X', '7X','8X')) {drawWinLine(50, 508, 558, 508) }
     //X 0. 3, 6 condition.
-    else if (arrayIncludes('0x', '3x', '6x')) {drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0X', '3X', '6X')) {drawWinLine(100, 50, 100, 558) }
     //X 1, 4,7,
-    else if (arrayIncludes('1x', '4x', '7x')) {drawWinLine (304, 50, 304, 558)}
+    else if (arrayIncludes('1X', '4X', '7X')) {drawWinLine (304, 50, 304, 558)}
 
-    else if (arrayIncludes('2x', '5x', '8x')) {drawWinLine (508, 50, 508, 558)}
+    else if (arrayIncludes('2X', '5X', '8X')) {drawWinLine (508, 50, 508, 558)}
 
-    else if (arrayIncludes('6x', '4x', '2x')) {drawWinLine (100, 508, 510, 90)}
+    else if (arrayIncludes('6X', '4X', '2X')) {drawWinLine (100, 508, 510, 90)}
 
-    else if (arrayIncludes('0x', '4x', '8x')) {drawWinLine (100, 100, 520, 520)}
+    else if (arrayIncludes('0X', '4X', '8X')) {drawWinLine (100, 100, 520, 520)}
 
     else if (arrayIncludes('0O', '1O', '2O')) {drawWinLine (50, 100, 558, 100)}
 
@@ -146,7 +146,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line gives us access to methods and properties to use on the canvas
     const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-    x1 = coordX1,
+let x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
     y1 = coordY1,
     //this line indicates wher the end of a lines x axis is/ 
@@ -157,7 +157,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     x = x1,
     //this variable  store temporary y axis data we update in our animation loop. 
     y = y1;
-}
+
 
 //this funtion intereacts with the canvas 
 function animateLineDrawing() {
@@ -214,7 +214,7 @@ audio('/media/winGame.mp3');
 animateLineDrawing();
 //this line waits 1 second. Then, clears canvas, resets game, adn allows clicking again.
 setTimeout(function () { clear(); resetGame(); } , 1000); 
-
+}
 //this funtcion resets the game in the event of a tie or a win. 
 function resetGame() {
     //this for loop iterates through each html square element 
