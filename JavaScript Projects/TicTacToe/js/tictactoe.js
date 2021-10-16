@@ -174,7 +174,7 @@ function animateLineDrawing() {
     //This method sets the width of our line. 
     c.lineWidth = 10; 
     //this method sets the color of our ine. 
-    c.strokeStyle = 'rgba(70, 255, 33, .8)';
+    c.strokeStyle = 'rgba(70, 255, 33, 1)';
     //this method draws everything we laid out above
     c.stroke();
     // this condition checks if weve reached the endpoint 
