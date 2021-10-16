@@ -73,9 +73,9 @@ function placeXOrO(squareNumber) {
 //drawWinLine function is called to draww line if condition is met.
 function checkWinConditions() {
     // x 0, 1, 2 condition. 
-    if      (arrayIncludes('0X', '1X', '2x')) { drawWinLine(50, 100, 558, 100) }
+    if      (arrayIncludes('0X', '1X', '2X')) { drawWinLine(50, 100, 558, 100) }
     // x 3, 4, 5 condition. 
-    else if (arrayIncludes('3x', '4X', '5x')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304) }
     //X 6, 7, 8 condition.
     else if (arrayIncludes('6X', '7X','8X')) {drawWinLine(50, 508, 558, 508) }
     //X 0. 3, 6 condition.
@@ -142,9 +142,9 @@ function audio(audioUrl) {
 //this function utilizes html canvas to draw win lines. 
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line access our html canvas element.
-    const canvas = document.getElementById('win-lines')
+const canvas = document.getElementById('win-lines')
     //this line gives us access to methods and properties to use on the canvas
-    const c = canvas.getContext('2d');
+const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
 let x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
@@ -174,7 +174,7 @@ function animateLineDrawing() {
     //This method sets the width of our line. 
     c.lineWidth = 10; 
     //this method sets the color of our ine. 
-    c.strokeStyle = 'rgba(70. 255. 33, .08)';
+    c.strokeStyle = 'rgba(70, 255, 33, .8)';
     //this method draws everything we laid out above
     c.stroke();
     // this condition checks if weve reached the endpoint 
@@ -186,7 +186,7 @@ function animateLineDrawing() {
         //this condition cancels our animation loop 
         //if we  have reache the end points. 
         if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop);}
-    }
+    
 }
 // this condition is simililar to the one above. 
 //this necessay for the 6, 4, 2 win condition
@@ -194,9 +194,9 @@ if (x1 <= x2 && y1 >= y2) {
     if (x < x2) { x += 10;}
     if (y > y2) {y -= 10; }
     if ( x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    
+    }
 }
-
-//this function cleas oour our cavas0 after our win line is drawn.
+//this function clears oour our cavas0 after our win line is drawn.
 function clear() {
     //this liine starts our animation loop.
     const animation = requestAnimationFrame(clear);
