@@ -146,20 +146,7 @@ const canvas = document.getElementById('win-lines')
     //this line gives us access to methods and properties to use on the canvas
 const c = canvas.getContext('2d');
     //this line indicates where the start of a lines x axis is.
-<<<<<<< HEAD:JavaScript Projects/JavaScript/TicTacToe/js/tictactoe.js
-    let x1 = coordX1,
-    //this line indicates wher the start of a lines y axis is . 
-        y1 = coordY1,
-        //this line indicates wher the end of a lines x axis is/ 
-        x1 =coordX2, 
-        //this line indicates where the end of a lines y axis is .
-        y2 = coordY2,
-        //this cariable stores temporary x axis data we update in our animation loop. 
-        x = x1,
-        //this variable  store temporary y axis data we update in our animation loop. 
-        y = y1;
-}
-=======
+
 let x1 = coordX1,
     //this line indicates wher the start of a lines y axis is . 
     y1 = coordY1,
@@ -172,7 +159,6 @@ let x1 = coordX1,
     //this variable  store temporary y axis data we update in our animation loop. 
     y = y1;
 
->>>>>>> main:JavaScript Projects/TicTacToe/js/tictactoe.js
 
 //this funtion intereacts with the canvas 
 function animateLineDrawing() {
@@ -189,11 +175,10 @@ function animateLineDrawing() {
     //This method sets the width of our line. 
     c.lineWidth = 10; 
     //this method sets the color of our ine. 
-<<<<<<< HEAD:JavaScript Projects/JavaScript/TicTacToe/js/tictactoe.js
+
     c.strokeStyle = 'rgba(70. 255. 33, .8)';
-=======
-    c.strokeStyle = 'rgba(70, 255, 33, 1)';
->>>>>>> main:JavaScript Projects/TicTacToe/js/tictactoe.js
+    
+
     //this method draws everything we laid out above
     c.stroke();
     // this condition checks if weve reached the endpoint 
@@ -204,25 +189,17 @@ function animateLineDrawing() {
         if (y < y2) { y += 10;}
         //this condition cancels our animation loop 
         //if we  have reache the end points. 
-<<<<<<< HEAD:JavaScript Projects/JavaScript/TicTacToe/js/tictactoe.js
+
         if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop); }
     }
-}
-// this condition is simililar to the one above. 
-//this necessay for the 6, 4, 2 win condition
-if (x1 <= x2 && y1 >= y2) {
-    if (x < x2) { x += 10; }
-    if (y > y2) { y -= 10; }
-=======
-        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop);}
-    
-}
+
+
 // this condition is simililar to the one above. 
 //this necessay for the 6, 4, 2 win condition
 if (x1 <= x2 && y1 >= y2) { 
     if (x < x2) { x += 10;}
     if (y > y2) {y -= 10; }
->>>>>>> main:JavaScript Projects/TicTacToe/js/tictactoe.js
+
     if ( x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }    
     }
 }
