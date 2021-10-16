@@ -104,7 +104,7 @@ function checkWinConditions() {
     else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine (100, 100, 520, 520)}
 
 
-    else if (selectedSquares.length <= 9) {
+    else if (selectedSquares.length >= 9) {
 //this fuction plays the tie game sound
         audio('./media/tie.mp3');
 //this function sets a.3 second timer berfore the resetGame is called
@@ -165,7 +165,7 @@ function animateLineDrawing() {
     //this cariable creates a loop.
     const animationLoop = requestAnimationFrame(animateLineDrawing);
     //this method clears content from last loop interation
-    c.clearReact(0, 0, 608, 608)
+    c.clearRect(0, 0, 608, 608)
     //this method starts a new path
     c.beginPath();
     //this method moves us to a starting point for our line. 
@@ -190,7 +190,7 @@ function animateLineDrawing() {
         //this condition cancels our animation loop 
         //if we  have reache the end points. 
 
-        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationtLoop); }
+        if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
     }
 
 
@@ -208,9 +208,9 @@ function clear() {
     //this liine starts our animation loop.
     const animationLoop = requestAnimationFrame(clear);
     //this line clears our canvas. 
-    c.clearReact(0, 0, 608, 608);
+    c.clearRect(0, 0, 608, 608);
     //this line stops our aniamtion loop. 
-    cancelAnimateFrom(animationLoop); 
+    cancelAnimationFrame(animationLoop); 
 }
 
 //this line disallows clicking while the Win Sound is Placing
@@ -229,7 +229,7 @@ function resetGame() {
         //this variable gets the html element of i
         let square = document.getElementById(String(i))
         //this removes our elements background image. 
-        square.style.backgroundimage = '' 
+        square.style.backgroundImage = '' 
     }
 //this resets our array so it is empty and we can start over. 
 selectedSquares = []; 
