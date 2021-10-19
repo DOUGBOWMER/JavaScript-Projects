@@ -48,7 +48,7 @@ const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
-    '_': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+    '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
     '=': (First_Operand, Second_Operand) => Second_Operand 
 };
 
@@ -87,6 +87,7 @@ if (target.classList.contains ('decimal')) {
 if(target.classList.contains('all-clear')) {
     Calculator_Reset();
     Update_Display();
+return
 }
 
 Input_Digit(target.value);
