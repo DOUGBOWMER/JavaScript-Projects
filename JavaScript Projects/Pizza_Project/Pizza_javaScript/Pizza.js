@@ -26,9 +26,9 @@ if (selectedSize === "Personal Pizza") {
     sizeTotal = 16;
 }
 runningTotal = sizeTotal;// setting value of variable + to the siz listed above
-console.log(selectedSize+" = $"+sizeTotal+" .00");//logging and equiting the cost of th pie, creating a display string with decimal
-console.log("size text1: "+text1);
-console.log("subtotal: $"+runningTotal+" .00");
+console.log(selectedSize+" = $" + sizeTotal+" .00");//logging and equiting the cost of th pie, creating a display string with decimal
+console.log("size text1: " + text1);
+console.log("subtotal: $" + runningTotal + " .00");
 //these variables will get paassed on to each function
 getTopping(runningTotal,text1);
 }; 
@@ -53,7 +53,7 @@ if (toppingCount > 1) {
 }
 runningTotal = (runningTotal + toppingTotal);/// adding total from the 2 sectioins
 console.log("total selected topping items: "+ toppingCount);//display string for output to user
-console.log(toppingCount+" topping-1 free Topping = "+"$"+toppingTotal+".00");///same as aboveand adding the topin total
+console.log(toppingCount + " topping-1 free Topping = " + "$" + toppingTotal + ".00");///same as aboveand adding the topin total
 console.log("topping text1: "+text1);//dispay size of pie
 console.log("Purchase Total: "+"$"+runningTotal+".00");
 document.getElementById("showText").innerHTML=text1;///gettin htnl element to render result for each side of menu

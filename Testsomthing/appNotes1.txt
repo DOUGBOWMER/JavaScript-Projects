@@ -1,0 +1,10 @@
+router2.get('/allback', (req, res) =>{
+    var password = req.query.Password;
+    if( password == "NewUser0911!") {
+        res.render('allback')
+    } else {
+        res.send('wrong Password hit back')
+    }
+}
+)
+//Password setup code( basic one field one name 

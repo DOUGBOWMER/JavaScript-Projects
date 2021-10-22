@@ -1,6 +1,9 @@
 body {
     background-color: crimson;
-    text-align: center;    
+    text-align: center; 
+    align-items: center;  
+    justify-content: center; 
+    align-self: center;
 }
 
 
@@ -24,7 +27,12 @@ div {
     width: 400px;
     height: 470px;
     margin: 10px auto;
-    align-content: center;
+    align-items: center;
+    align-items: center;
+    display: absolute;
+    left: 50% ;
+    right: 50%;
+ 
     
 }
 
@@ -32,6 +40,10 @@ div {
     width: 600px;
     height: 200px;
     align-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    left:0
     
 }
 
