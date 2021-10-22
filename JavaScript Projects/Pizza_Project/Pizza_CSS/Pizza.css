@@ -1,9 +1,6 @@
 body {
     background-color: crimson;
-    text-align: center; 
-    align-items: center;  
-    justify-content: center; 
-    align-self: center;
+    
 }
 
 
@@ -24,26 +21,16 @@ div {
 }
 
 #menuBG {
-    width: 400px;
+    width: auto;
     height: 470px;
-    margin: 10px auto;
-    align-items: center;
-    align-items: center;
-    display: absolute;
-    left: 50% ;
-    right: 50%;
- 
-    
+    margin: 10% 0% 35% 30%;
+   
 }
 
 #frmMenu {
     width: 600px;
     height: 200px;
-    align-content: center;
-    align-self: center;
     align-items: center;
-    text-align: center;
-    left:0
     
 }
 
@@ -82,7 +69,7 @@ div {
 #showText {
     width: 200px;
     height: 190px;
-    margin: 0px auto;
+    margin: 25px auto;
     float: left;
 
 }
