@@ -29,29 +29,38 @@ function show() {
     ///this displays a task to the list in athe order that it is inputed
 for (var i = 0; i < todos.length; i ++) {
     // this also displays the task as a list and creates the buttin with the x
-    html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
+    html += '<li>' + todos[i] + '<button class="remove" id=' + i + '">x</button></li>';
+ 
 
-};
+}
+
+var buttons = document.getElementsByClassName('remove');
+for (var i = 0; i <buttons.length; i++) {
+    buttons[i].addEventListener('click', remove);
+}
+
+
 html += '</ul>';
 //this displays the task as a list
+document.getElementById('todos').innerHTML = html;
+
+
 }
 
 document.getElementById('add').addEventListener('click', add);
 //this will keep the inputs dislpayed permently on the screen
 show();
 
-function removeTask() { ///naming function of the action remove, allowing to remove items
-var id = this.getAttribute('id') // get the id afte naming the x buttonts Xbutton
-var todos = get_todos(); // converts todos variable into the previous get_todos function
-todos.splice(id, 1);//spliced the xbutton and the index togeth
-lacalStorage.setItem('todo', JSON.stringify(todos));// goes to local storage to get todo items then convert to string call todos
-show();/// call the show function
-
-return false/// set show to false
+function remove() {
+    var id = this.getAttribute('id')
+    var todos = get_todos();
+    todos.splice(id,1);
+    localStorage.setitem('todo', JSON>stringify(todos));
+    show();
+    
+    return false
 }
 
-var buttons = documents.getElementByClassName('remove');
-for (var i = 0; i < buttons.length; i ++) {
-    buttons[i].addEventListener('click', remove);
 
-};
+
+
